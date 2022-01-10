@@ -1,9 +1,7 @@
 *{
-    padding: 0,10%;
-    margin:0,10%;
-}
-body{
-    background-color: mediumblue;
+    padding: 0,1px;
+    margin: 0,1px;
+
 }
 
 h1{
@@ -13,18 +11,17 @@ h1{
     font-size: 50px;
     
 }
-.titulo{color: yellow;
+.titulo{
     font-style: italic;
     font-size: 30px;
 }
 h3{
     font-style: italic;
 }
-body{color: yellow;
-}
+
 .logo__principal{
-    width: 100px;
-    height: 120px;
+    width: 180px;
+    height: 200px;
     text-align: center;
     padding-left: 20px;
     padding-right: 20px;
@@ -34,22 +31,22 @@ body{color: yellow;
     border-radius:3%;
     width: 700px;
     margin: 4%;
-    padding-right: 20px;
-    padding-left: 20px;
     display: grid;
-    justify-content: center;
+    text-align: center;
 }
 .jugadores__figuras{
     width: 200px; 
     height: 200px;
     border-radius: 3%;
 }
-.opciones__menu{
+.opciones__menu ul{
+
     color: yellow;
-    list-style: none;
-    display: grid;
-    justify-content: center;
+    list-style-type: none;
+    align-items: center;
+    display: inline;
 }
+
 .final__pagina{
     text-align: center;
 }
@@ -62,19 +59,78 @@ body{color: yellow;
 .sector__imagenes{
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    d
-    
 }
 .elgeneral{
     width: auto;
     margin: auto;
 }
 main{
-    background-color: gold;
-    color:blue
+    background:linear-gradient(to bottom, blue, yellow)
+    
 }
 .encabezado{
     background: linear-gradient(to bottom, mediumblue, yellow)
 
 }
+.separador{
+    height: 50px;
+    border-style: double;
+}
+.fondo__total{
+    background: linear-gradient(to bottom,blue,yellow) 
+}
 
+/* Mediaqueri*/
+@media (max-width:375px) {
+    .encabezado{
+        flex-direction: column;
+    }
+    .sector__imagenes{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width:768px){
+    .encabezado{
+        display: flex;
+        position: initial;
+    }
+    .sector__imagenes{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width:1200px){
+    .sector__imagenes {
+    max-width:1000px;
+    }
+    #elgeneral{
+        width:1100px;
+        }
+    }
+    @media screen and (max-width:320px){
+        .sector__imagenes {
+        max-width:200px;
+        }
+        #elgeneral{
+            width:auto;
+            } 
+    }        
+    @media screen and (max-width:600px){
+        .sector__imagenes{
+            width: 50px;
+            height: 100px;
+        }
+        
+       
+        #elgeneral{
+        width:auto;
+        } 
+       
+        header h1 a{
+        width:auto;
+        }
+        .primer__equipo{
+            width: 520px;
+            height: 400px;
+        }
+       }
